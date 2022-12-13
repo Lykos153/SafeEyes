@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = {self, nixpkgs, flake-utils, ...}@inputs: 
@@ -9,7 +9,6 @@
   
       buildPythonApplication rec {
         name = "safeeyes";
-        #version = "2.1.4";
 
         src = ./.;
 
